@@ -1,0 +1,64 @@
+@import-normalize;
+
+/* -------------------------------------------------------------------------- */
+/*                                    fonts                                   */
+/* -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'OmnesLight';
+  src: url('./assets/fonts/Omnes/Omnes Light.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OmnesRegular';
+  src: url('./assets/fonts/Omnes/Omnes.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OmnesMedium';
+  src: url('./assets/fonts/Omnes/Omnes Medium.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OmnesBold';
+  src: url('./assets/fonts/Omnes/Omnes Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin light {
+  font-family: 'OmnesLight', sans-serif;
+}
+@mixin regular {
+  font-family: 'OmnesRegular', sans-serif;
+}
+@mixin medium {
+  font-family: 'OmnesMedium', sans-serif;
+}
+@mixin bold {
+  font-family: 'OmnesBold', sans-serif;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   colors                                   */
+/* -------------------------------------------------------------------------- */
+$primary-color: #273044;
+$secondary-color: #ff4560;
+
+body {
+  margin: 0;
+  @include regular;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
