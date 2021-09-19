@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Agency = () => {
-  return <div>Agency</div>;
+  return <h1>Agency</h1>;
 };
 
 export default Agency;
