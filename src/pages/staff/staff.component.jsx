@@ -1,8 +1,12 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import './staff.styles.scss';
 import CardList from '../../components/cardList/cardList.component';
 
 const Staff = () => {
+  const [staff, setStaff] = useState([]);
+
+  useEffect(() => {}, []);
+
   return (
     <Fragment>
       <section className='hero'>
@@ -20,7 +24,7 @@ const Staff = () => {
           <h3 className=' title'>Filter colleagues</h3>
           <div className='search'>
             <input type='text' placeholder='Search' />
-            <i class='fas fa-search'></i>
+            <i className='fas fa-search'></i>
           </div>
         </div>
       </section>
