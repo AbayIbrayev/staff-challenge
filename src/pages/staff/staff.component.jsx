@@ -17,12 +17,10 @@ const Staff = () => {
 
       <section className='filter'>
         <div className='container'>
-          <h3 className=' title'>Filter collagues</h3>
+          <h3 className=' title'>Filter colleagues</h3>
           <div className='search'>
-            <input type='text' />
-            <span>
-              <i class='fas fa-search'></i>
-            </span>
+            <input type='text' placeholder='Search' />
+            <i class='fas fa-search'></i>
           </div>
         </div>
       </section>
