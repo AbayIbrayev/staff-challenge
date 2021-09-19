@@ -71,11 +71,21 @@ body {
   background-image: url('./assets/images/Background.png');
   background-size: cover;
   background-color: #f4f4f4;
+  min-width: 20rem;
 }
 
-@media (max-width: 600px) {
+.container {
+  width: 65%;
+  margin-inline: auto;
+}
+
+@media (max-width: 768px) {
   body {
     background-image: none;
+  }
+
+  .container {
+    width: 90%;
   }
 }
 

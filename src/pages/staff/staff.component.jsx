@@ -14,9 +14,10 @@ const Staff = () => {
           </p>
         </div>
       </section>
+
       <section className='filter'>
         <div className='container'>
-          <h3 className='title'>Filter collagues</h3>
+          <h3 className=' title'>Filter collagues</h3>
           <div className='search'>
             <input type='text' />
             <span>
