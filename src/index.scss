@@ -50,12 +50,33 @@
 /* -------------------------------------------------------------------------- */
 $primary-color: #273044;
 $secondary-color: #ff4560;
+@mixin gradient-purple {
+  background-image: linear-gradient(#006ca1, #662483);
+}
+@mixin gradient-green {
+  background-image: linear-gradient(#82c5b2, #ced836);
+}
+@mixin gradient-orange {
+  background-image: linear-gradient(#ec840b, #961d66);
+}
+@mixin gradient-blue {
+  background-image: linear-gradient(#0ca9e0, #006ca1);
+}
 
 body {
   margin: 0;
   @include regular;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./assets/images/Background.png');
+  background-size: cover;
+  background-color: #f4f4f4;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-image: none;
+  }
 }
 
 code {
