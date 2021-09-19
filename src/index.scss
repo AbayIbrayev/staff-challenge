@@ -50,18 +50,14 @@
 /* -------------------------------------------------------------------------- */
 $primary-color: #273044;
 $secondary-color: #ff4560;
-@mixin gradient-purple {
-  background-image: linear-gradient(#006ca1, #662483);
-}
-@mixin gradient-green {
-  background-image: linear-gradient(#82c5b2, #ced836);
-}
-@mixin gradient-orange {
-  background-image: linear-gradient(#ec840b, #961d66);
-}
-@mixin gradient-blue {
-  background-image: linear-gradient(#0ca9e0, #006ca1);
-}
+$gradient-purple: linear-gradient(#006ca1, #662483);
+$gradient-green: linear-gradient(#82c5b2, #ced836);
+$gradient-orange: linear-gradient(#ec840b, #961d66);
+$gradient-blue: linear-gradient(#0ca9e0, #006ca1);
+$purple: #662483;
+$green: #82c5b2;
+$orange: #ec840b;
+$blue: #0ca9e0;
 
 *,
 *::after,

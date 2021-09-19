@@ -69,7 +69,7 @@ const Staff = () => {
 
       <section className='filter'>
         <div className='container'>
-          <h3 className=' title'>Filter colleagues</h3>
+          <h2 className=' title'>Filter colleagues</h2>
           <div className='search'>
             <input type='text' placeholder='Search' />
             <i className='fas fa-search'></i>
@@ -79,9 +79,9 @@ const Staff = () => {
 
       <section className='cardList'>
         <div className='container'>
-          <h3 className='title'>
+          <h2 className='title'>
             Showing {staff ? staff.length : 0} colleague(s)
-          </h3>
+          </h2>
           <span className='divider' />
           {loader ? <Loader /> : <CardList staff={staff} />}
         </div>
