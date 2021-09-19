@@ -5,7 +5,16 @@ import CardList from '../../components/cardList/cardList.component';
 const Staff = () => {
   const [staff, setStaff] = useState([]);
 
-  useEffect(() => {}, []);
+  const API = 'http://interview.dev.steinias.com/api/employees';
+
+  useEffect(() => {
+    async function fetchData() {
+      const response = await fetch(API);
+      const json = await response.json();
+      console.log(json);
+    }
+    fetchData();
+  }, []);
 
   return (
     <Fragment>
