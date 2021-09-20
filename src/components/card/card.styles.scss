@@ -62,9 +62,9 @@
       .subtitle {
         @include light;
         margin: 0;
-        font-size: 13px;
-        line-height: 17px;
-        max-width: 18ch;
+        font-size: 12px;
+        max-width: 22ch;
+        text-transform: uppercase;
       }
     }
 
