@@ -59,8 +59,9 @@ const Overlay = ({ person, isOpen, setIsOpen }) => {
                       format='YY'
                       durationFromNow
                     />
-                  )}{' '}
-                  on {<Moment date={birthday} format='MMMM DD' />}
+                  )}
+                  {' on '}
+                  {<Moment date={birthday} format='MMMM DD' />}
                 </span>
               </p>
             )}
