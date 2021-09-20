@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react';
+
 import './staff.styles.scss';
 import CardList from '../../components/cardList/cardList.component';
 import Loader from '../../components/loader/loader.component';

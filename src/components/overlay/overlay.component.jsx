@@ -1,6 +1,9 @@
 import React from 'react';
 import './overlay.component.scss';
 
+import Moment from 'react-moment';
+import moment from 'moment';
+
 import { useMediaQuery } from 'react-responsive';
 
 const Overlay = ({ person, isOpen, setIsOpen }) => {
@@ -41,13 +44,23 @@ const Overlay = ({ person, isOpen, setIsOpen }) => {
           <div className='text'>
             <h3 className='title'>{name}</h3>
             <p className='subtitle'>{jobTitle}</p>
-            <p className='description highlight'>{hireDate}</p>
+            <p className='description highlight'>
+              Joined <Moment date={moment(hireDate)} durationFromNow /> ago
+            </p>
             {!isMobile && (
               <p className='description'>
                 Birthday:{' '}
                 <span>
                   <i className='fas fa-birthday-cake'></i>{' '}
-                  {showAge && `Turning ${'NUM'}`} on {birthday}
+                  {showAge && 'Turning '}
+                  {showAge && (
+                    <Moment
+                      date={moment(birthday).add(-1, 'y')}
+                      format='YY'
+                      durationFromNow
+                    />
+                  )}{' '}
+                  on {<Moment date={birthday} format='MMMM DD' />}
                 </span>
               </p>
             )}
