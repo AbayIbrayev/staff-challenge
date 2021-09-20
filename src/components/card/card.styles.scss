@@ -128,14 +128,58 @@
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .card {
+    height: auto;
+    width: 250px;
+    justify-self: center;
+
+    .city {
+      top: 0;
+      bottom: auto;
+    }
+
+    button {
+      bottom: 25%;
+    }
+
     .content {
+      flex-direction: column;
+
+      img {
+        height: 250px;
+        width: 250px;
+      }
       .text {
         .subtitle {
           max-width: none;
         }
       }
+    }
+  }
+
+  .card__orange {
+    img {
+      border: none;
+      border-bottom: 2px solid $orange;
+    }
+  }
+  .card__blue {
+    img {
+      border: none;
+      border-bottom: 2px solid $blue;
+    }
+  }
+  .card__purple {
+    img {
+      border: none;
+      border-bottom: 2px solid $purple;
+    }
+  }
+  .card__green {
+    img {
+      border: none;
+      border-bottom: 2px solid $green;
     }
   }
 }
