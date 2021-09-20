@@ -6,6 +6,7 @@ import Loader from '../../components/loader/loader.component';
 const Staff = () => {
   const [staff, setStaff] = useState([]);
   const [loader, setLoader] = useState(false);
+  const [term, setTerm] = useState('');
 
   const API = 'http://interview.dev.steinias.com/api/employees';
 
@@ -55,6 +56,19 @@ const Staff = () => {
     fetchData();
   }, []);
 
+  const searchResults = !term
+    ? staff
+    : staff.filter((person) =>
+        person.name.toLowerCase().includes(term.toLocaleLowerCase())
+      );
+
+  const shownResults =
+    searchResults.length === 0 ? (
+      <p>No Matches</p>
+    ) : (
+      <CardList searchResults={searchResults} />
+    );
+
   return (
     <Fragment>
       <section className='hero'>
@@ -71,7 +85,13 @@ const Staff = () => {
         <div className='container'>
           <h2 className=' title'>Filter colleagues</h2>
           <div className='search'>
-            <input type='text' placeholder='Search' />
+            <input
+              type='text'
+              placeholder='Search'
+              value={term}
+              autoComplete='off'
+              onChange={(e) => setTerm(e.target.value)}
+            />
             <i className='fas fa-search'></i>
           </div>
         </div>
@@ -80,10 +100,10 @@ const Staff = () => {
       <section className='cardList'>
         <div className='container'>
           <h2 className='title'>
-            Showing {staff ? staff.length : 0} colleague(s)
+            Showing {searchResults ? searchResults.length : 0} colleague(s)
           </h2>
           <span className='divider' />
-          {loader ? <Loader /> : <CardList staff={staff} />}
+          {loader ? <Loader /> : shownResults}
         </div>
       </section>
     </Fragment>

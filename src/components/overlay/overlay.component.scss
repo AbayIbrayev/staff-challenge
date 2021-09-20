@@ -14,8 +14,8 @@
     margin-inline: auto;
     height: auto;
     max-height: 70vh;
-    margin-top: 10%;
-    background: #fff;
+    margin-top: calc(100vh - 85vh - 20px);
+    background: white;
     overflow: auto;
     @include light;
     color: $primary-color;
@@ -26,6 +26,8 @@
       right: 5px;
       top: 5px;
       outline: none;
+      cursor: pointer;
+      background-color: white;
       border: none;
       font-size: 1.3rem;
       transition: color 0.2s ease-out;
@@ -212,7 +214,7 @@
       flex-direction: row;
       .img {
         background: no-repeat left top url('../../assets/images/imageBig.png');
-        background-size: cover;
+        // background-size: cover;
         flex-basis: 40%;
         height: auto;
       }
